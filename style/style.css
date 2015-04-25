@@ -48,6 +48,7 @@ body {
   border-bottom: 1px solid #68c4a9;
   cursor: pointer;
   padding-left:10px;
+  text-align: left;
 }
 
 .list-item:hover {
