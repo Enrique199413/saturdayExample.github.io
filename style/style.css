@@ -15,21 +15,27 @@ body {
 	text-align: right;
 }
 
-.pull-left {
-  float:left !important;
-}
+
 
 .pull-right {
   float:right !important;
 }
 
+.pull-left {
+  float:left !important;
+}
+
+.container{
+  width: 100%;
+  height: 80%;
+}
 .left-container {
-  width: 44%;
+  width: 40%;
   padding: 40px;
 }
 
 .right-container {
-  width: 44%;
+  width: 40%;
   padding: 40px;
 }
 
@@ -49,6 +55,11 @@ body {
   cursor: pointer;
   padding-left:10px;
   text-align: left;
+}
+
+.list-item a{
+  text-decoration: none;
+  color:black;
 }
 
 .list-item:hover {
@@ -78,13 +89,12 @@ body {
 
 .list-horizontal {
   margin: 0 auto 0 auto;
-  width: 745px;
+  width: 640px;
   height: 48px;
 }
 
 .image-style {
   width: 406px;
-  margin-left: 90px;
 }
 
 h1 {
@@ -110,11 +120,17 @@ h1 {
 	box-shadow: 1px 1px 2px black;
 }
 
+.text-justified {
+  font-style: normal;
+  font-size: x-large;
+  text-align: justify;
+}
+
 .footer {
 	padding: 5px;
   bottom: 0;
   width: 98%;
-  position: absolute;
+  position: relative;
 }
 
 .style-footer {
@@ -123,14 +139,8 @@ h1 {
   border-top: 1px solid #68c4a9;
   padding-top: 42px;
   padding-right: 170px;
-
 }
 
-.text-justified {
-  font-style: normal;
-  font-size: x-large;
-  text-align: justify;
-}
 
 .footer-name {
 	font-family: biloxi;
@@ -152,7 +162,6 @@ h1 {
   position: relative;
   margin-left: 10px;
   text-align: right;
-
 }
 
 .images {
@@ -184,4 +193,202 @@ h1 {
   position: absolute;
   right: 25px;
   margin-top: 3px;
+}
+
+@media (min-width: 991px) and (max-width: 1061px){
+  .style-footer {
+    padding-right: 0px;
+    font-size: 20pt;
+    margin-top: 0px;
+    border-top: 1px solid #68c4a9;
+    padding-top: 0px;
+  }
+  .logos{
+    width: 182px;
+    margin-top:-64px;
+  }
+}
+
+
+@media (min-width: 250px) and (max-width: 990px){
+  .container {
+    height: 100%;
+  }
+  .list-horizontal {
+    margin: 0 auto 0 auto;
+    width: auto;
+    height: auto;
+    list-style: none;
+    text-align: center;
+    margin-left: -40px;
+  }
+  .header{
+    text-align: center;
+    height: auto;
+    background: #ace5d5;
+  }
+  .menu-horizontal li{
+    float:none;
+
+  }
+  .pull-left {
+    float:none;
+  }
+  .left-container {
+    width: auto;
+    padding: 10px;
+  }
+  .pull-right{
+    float:none !important;
+  }
+  .right-container {
+    width: auto;
+    text-align: center;
+  }
+  .text-justified{
+    font-size: normal;
+    text-align: justify;
+  }
+
+  .image-style {
+    margin-left: 0px;
+    width: auto;
+  }
+  .footer {
+  	padding: 5px;
+    bottom: 0;
+    width: auto;
+    position: relative;
+  }
+
+  .style-footer {
+    font-size: 15pt;
+    margin-top: -66px;
+    border-top: 1px solid #68c4a9;
+    padding-top: 42px;
+    width:auto;
+    padding-right: 0px;
+  }
+
+  .footer-name {
+  	font-family: biloxi;
+  	font-size: 145pt;
+    margin-bottom: -35px;
+  }
+
+  .history-footer-name {
+  	font-size: 45pt;
+  }
+
+  .other-sections{
+    margin-top: -18px;
+    padding-top: 0px;
+    text-align:center;
+  }
+  .contact {
+    width: auto;
+    text-align: center;
+  }
+  .logos{
+    height: 38px;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-left: -35%;
+  }
+}
+
+
+@page{
+  size: A4;
+}
+
+@media print {
+  .container {
+    height: auto;
+  }
+  body {
+    margin: 1in;
+    line-height: 2;
+  }
+  .header{
+    margin-top:0px;
+    height: 110px;
+  }
+  img {
+    display:none;
+  }
+  .menu-horizontal {
+    display:none;
+  }
+  .pull-left {
+    float:none;
+  }
+  .left-container {
+    width: 100%;
+    padding: 10px;
+  }
+  .pull-right{
+    pull-right:none;
+  }
+  .right-container {
+    display:none;
+  }
+  .text-justified{
+    font-size: normal;
+    text-align: justify;
+  }
+  video,audio, object {
+    display: none
+  }
+
+
+  .footer {
+  	padding: 5px;
+    bottom: 0;
+    width: 75%;
+    position: absolute;
+  }
+
+  .style-footer {
+    font-size: 15pt;
+    margin-top: -66px;
+    border-top: 1px solid #68c4a9;
+    padding-top: 42px;
+    width:auto;
+    padding-right: 0px;
+  }
+
+  .footer-name {
+  	font-family: biloxi;
+  	font-size: 145pt;
+    margin-bottom: -35px;
+  }
+
+  .history-footer-name {
+  	font-size: 45pt;
+  }
+
+  .other-sections{
+    margin-top: -18px;
+    padding-top: 0px;
+    text-align:center;
+  }
+  .logos {
+    display:none;
+  }
+  .hidentinprint{
+    display:none;
+  }
+  .contact {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@page:first {
+  size: A4;
+  margin: 0;
 }
